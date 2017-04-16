@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Tyrannosaurus Flex</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<img src="imgs/lead.jpg" alt="Tyrannosaurus Flex" />
+				</section>
+				<section>
+					<h1>Flexbox</h1>
+					<p>A more efficient way to lay out, align and distribute space among items in a container.</p>
+					<p class="fragment" data-fragment-index="1">Even when their size is unknown or dynamic.</p>
+					<aside class="notes">
+						<ul>
+							<li>has been difficult to do in web layouts for years and even decades</li>
+						</ul>
+					</aside>
+				</section>
+				<section>
+					<h2>The goal</h2>
+					<p>Give the container the ability to alter the width, height and order of elements to best fit the available space</p>
+					<p class="fragment" data-fragment-index="1">Accommodate all screen sizes and display devices</p>
+				</section>
+				<section>
+					<h2>Direction agnostic</h2>
+					<p></p>
+				</section>
+				<section>
+					<h2>Can I use it?</h2>
+					<img src="imgs/caniuse.png" alt="Flexbox browser support" />
+					<p class="fragment" data-fragment-index="1">Yes, you can.</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
