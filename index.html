@@ -7,39 +7,71 @@
 		<title>Tyrannosaurus Flex</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/theme/solarized.css">
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<section>
+					<h1>Flexbox</h1>
 					<img src="imgs/lead.jpg" alt="Tyrannosaurus Flex" />
 				</section>
 				<section>
-					<h1>Flexbox</h1>
-					<p>A more efficient way to lay out, align and distribute space among items in a container.</p>
-					<p class="fragment" data-fragment-index="1">Even when their size is unknown or dynamic.</p>
+					<section>
+						<h1>What is Flexbox?</h1>
+						<p>It's a "new" layout module in CSS3.</p>
+						<p class="fragment" data-fragment-index="1">New = 8 years old.</li>
+					</section>
+
+					<section>
+						<h2>8 years old = you can now use it.</h2>
+						<img src="imgs/caniuse.png" alt="Flexbox browser support" />
+					</section>
+
+					<section>
+						<h2>We use it here at Ambassador.</h2>
+						<img src="imgs/app.png" alt="Ambassador Dashboard" />
+					</section>
+
+					<section data-background-video="https://media.giphy.com/media/11ISwbgCxEzMyY/giphy.mp4"></section>
+
 					<aside class="notes">
 						<ul>
-							<li>has been difficult to do in web layouts for years and even decades</li>
+							<li>W3C started the working draft in June 2009</li>
+							<li>Has become widely adopted as a web standard</li>
 						</ul>
 					</aside>
 				</section>
 				<section>
-					<h2>The goal</h2>
-					<p>Give the container the ability to alter the width, height and order of elements to best fit the available space</p>
-					<p class="fragment" data-fragment-index="1">Accommodate all screen sizes and display devices</p>
+					<h2>How does it help?</h2>
+					<ul>
+						<li>it helps to position items in horizontal or vertical stacks in the browser</li>
+						<li>it determines the most efficient way to lay out, align and distribute space among items in a container
+							<ul>
+								<li>(even when their size is unknown or dynamic).</li>
+							</ul>
+						</li>
+					</ul>
+					<aside class="notes">
+						<ul>
+							<li>Notoriously difficult to do in a browser for many years</li>
+							<li>tables > floats > flex</li>
+							<li>Demo: https://philipwalton.github.io/solved-by-flexbox/demos/grids/</li>
+						</ul>
+					</aside>
 				</section>
+
 				<section>
-					<h2>Direction agnostic</h2>
-					<p></p>
+					<h2>Why would you use it?</h2>
+					<ul>
+						<li>designers and developers find it easy to use</li>
+						<li>less HTML and CSS to achieve complex layouts</li>
+						<li>handle many devices with one codebase</li>
+					</ul>
 				</section>
-				<section>
-					<h2>Can I use it?</h2>
-					<img src="imgs/caniuse.png" alt="Flexbox browser support" />
-					<p class="fragment" data-fragment-index="1">Yes, you can.</p>
-				</section>
+
+				<section data-background-video="https://media.giphy.com/media/uTuLngvL9p0Xe/giphy.mp4"></section>
 			</div>
 		</div>
 
@@ -60,6 +92,10 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+
+			Reveal.configure({
+				backgroundTransition: 'zoom'
+			})
 		</script>
 	</body>
 </html>
