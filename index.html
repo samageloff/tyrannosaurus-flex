@@ -21,7 +21,7 @@
 					<section>
 						<h1>What is Flexbox?</h1>
 						<p>It's a "new" layout module in CSS3.</p>
-						<p class="fragment" data-fragment-index="1">New = 8 years old.</li>
+						<p class="fragment" data-fragment-index="1">New = 8 years old.</p>
 					</section>
 
 					<section>
@@ -69,6 +69,62 @@
 						<li>less HTML and CSS to achieve complex layouts</li>
 						<li>handle many devices with one codebase</li>
 					</ul>
+				</section>
+
+				<section>
+					<h2>Using Flex is simple</h2>
+					<p>First you need a "flex-container":</p>
+					<p class="fragment" data-fragment-index="1">
+						<pre><code class="html" data-trim>
+							<div class="flex-container"></div>
+						</code></pre>
+					</p>
+
+					<p class="fragment" data-fragment-index="1">
+						<p>With the flex display property:</p>
+						<pre><code class="css" data-trim>
+							.flex-container {
+							  display: flex;
+							}
+						</code></pre>
+					</p>
+
+					<aside class="notes">
+						<ul>
+							<li>Adding `display: flex` to an element provides access to the "Flex API" for it's child elements.</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<p>And a few "flex items":</p>
+					<p class="fragment" data-fragment-index="1">
+						<pre><code class="html" data-trim>
+							<div class="flex-container">
+							  <div class="flex-item">Item 1</div>
+							  <div class="flex-item">Item 2</div>
+							  <div class="flex-item">Item 3</div>
+							</div>
+						</code></pre>
+					</p>
+
+					<p class="fragment" data-fragment-index="1">
+						<p>And a single flex property:</p>
+						<pre><code class="css" data-trim>
+							.flex-container {
+							  display: flex
+							}
+
+							.flex-item {
+							   flex: 1;
+							}
+						</code></pre>
+					</p>
+				</section>
+
+				<section>
+					<h2>Voila!</h2>
+					<img src="imgs/flex-example-1.png" alt="flex example 1" class="fragment" data-fragment-index="1" />
 				</section>
 
 				<section data-background-video="https://media.giphy.com/media/uTuLngvL9p0Xe/giphy.mp4"></section>
