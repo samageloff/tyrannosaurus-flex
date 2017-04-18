@@ -14,39 +14,6 @@ class App extends Component {
         <div className="flex-item">
           <div className="content" />
         </div>
-        <div className="flex-item">
-          <div className="content" />
-        </div>
-        <div className="flex-item">
-          <div className="content" />
-        </div>
-        <div className="flex-item">
-          <div className="content" />
-        </div>
-        <div className="flex-item">
-          <div className="content" />
-        </div>
-        <div className="flex-item">
-          <div className="content" />
-        </div>
-        <div className="flex-item">
-          <div className="content" />
-        </div>
-        <div className="flex-item">
-          <div className="content" />
-        </div>
-        <div className="flex-item">
-          <div className="content" />
-        </div>
-        <div className="flex-item">
-          <div className="content" />
-        </div>
-        <div className="flex-item">
-          <div className="content" />
-        </div>
-        <div className="flex-item">
-          <div className="content" />
-        </div>
       </div>
     )
   }

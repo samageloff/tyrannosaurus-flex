@@ -1,21 +1,21 @@
 .flex-container {
   display: flex;
   height: 100%;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  /*justify-content: space-around;*/
   /*align-items: center;*/
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   transition: all 1.5s cubic-bezier(.75, 0, .1, 1);
 }
 
 .flex-item {
   align-items: center;
-  display: flex;
   background: hotpink;
   counter-increment: flex-item-counter;
+  display: flex;
+  flex-grow: 1;
   justify-content: center;
   transition: all 1.5s cubic-bezier(.75, 0, .1, 1);
-  flex-grow: 1;
 }
 
 [class*='cat-'] {
@@ -24,15 +24,14 @@
 
 .flex-item:nth-child(even) {
   background-color: lightgreen;
-  /*background: url('imgs/cat-1.jpg') center -1000px / contain repeat;*/
 }
 
 .content {
   align-items: center;
-  justify-content: center;
   color: black;
-  font-size: 1rem;
   display: flex;
+  font-size: 5.4vw;
+  justify-content: center;
   padding: 1rem;
   position: relative;
   width: 100%;
