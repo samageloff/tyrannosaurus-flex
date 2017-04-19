@@ -6,16 +6,16 @@
 
 		<title>Tyrannosaurus Flex</title>
 
-		<link rel="stylesheet" href="/css/reveal.css">
-		<link rel="stylesheet" href="/css/theme/solarized.css">
-		<link rel="stylesheet" href="/lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/solarized.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<section>
 					<h1>Flexbox</h1>
-					<img src="/imgs/lead.jpg" alt="Tyrannosaurus Flex" />
+					<img src="imgs/lead.jpg" alt="Tyrannosaurus Flex" />
 				</section>
 				<section>
 					<section>
@@ -26,12 +26,12 @@
 
 					<section>
 						<h2>8 years old = you can now use it.</h2>
-						<img src="/imgs/caniuse.png" alt="Flexbox browser support" />
+						<img src="imgs/caniuse.png" alt="Flexbox browser support" />
 					</section>
 
 					<section>
 						<h2>We use it here at Ambassador.</h2>
-						<img src="/imgs/app.png" alt="Ambassador Dashboard" />
+						<img src="imgs/app.png" alt="Ambassador Dashboard" />
 					</section>
 
 					<section data-background-video="https://media.giphy.com/media/11ISwbgCxEzMyY/giphy.mp4"></section>
@@ -112,28 +112,20 @@
 						   flex: 1;
 						}
 					</code></pre>
-				</section>
 
-				<section data-background-video="https://media.giphy.com/media/uTuLngvL9p0Xe/giphy.mp4">
-					<a href="index.html" target="_blank">Demo</a>
+					<a href="flex-1-demo.html" target="_blank">Flex: 1</a>
 				</section>
 
 				<section>
-					<h2>Flex in the real world</h2>
+					<h2>Flex in the real world.</h2>
 				</section>
 
-				<section>
-					<h2>Resources</h2>
-					<ul>
-						<li>https://css-tricks.com/snippets/css/a-guide-to-flexbox/</li>
-						<li>http://flexboxfroggy.com/</li>
-					</ul>
-				</section>
+				<section data-background-video="https://media.giphy.com/media/uTuLngvL9p0Xe/giphy.mp4"></section>
 			</div>
 		</div>
 
-		<script src="/lib/js/head.min.js"></script>
-		<script src="/js/reveal.js"></script>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
 
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
@@ -143,10 +135,10 @@
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: '/plugin/markdown/marked.js' },
-					{ src: '/plugin/markdown/markdown.js' },
-					{ src: '/plugin/notes/notes.js', async: true },
-					{ src: '/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
 
