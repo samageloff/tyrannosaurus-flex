@@ -34,8 +34,6 @@
 						<img src="/imgs/app.png" alt="Ambassador Dashboard" />
 					</section>
 
-					<section data-background-video="https://media.giphy.com/media/11ISwbgCxEzMyY/giphy.mp4"></section>
-
 					<aside class="notes">
 						<ul>
 							<li>W3C started the working draft in June 2009</li>
@@ -43,6 +41,7 @@
 						</ul>
 					</aside>
 				</section>
+
 				<section>
 					<h2>How does it help?</h2>
 					<ul>
@@ -72,18 +71,26 @@
 				</section>
 
 				<section>
-					<h2>Using Flex is simple</h2>
-					<p>First you need a "flex-container":</p>
+					<section>
+						<h2>Using Flex is simple</h2>
+						<p>First you need a "flex-container":</p>
 
-					<pre><code class="html" data-trim>
-						<div class="flex-container"></div>
-					</code></pre>
+						<pre><code class="html" data-trim>
+							<div class="flex-container"></div>
+						</code></pre>
 
-					<pre><code class="css" data-trim>
-						.flex-container {
-						  display: flex;
-						}
-					</code></pre>
+						<pre><code class="css" data-trim>
+							.flex-container {
+							  display: flex;
+							}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Knowing when to use flex?</h2>
+						<img src="imgs/freaking-out.gif" alt="freaking out" />
+						<p class="fragment" data-fragment-index="1">Takes some practice.</p>
+					</section>
 
 					<aside class="notes">
 						<ul>
@@ -96,16 +103,16 @@
 					<p>And a few "flex items":</p>
 					<pre><code class="html" data-trim>
 						<div class="flex-container">
-						  <div class="flex-item">Item 1</div>
-						  <div class="flex-item">Item 2</div>
-						  <div class="flex-item">Item 3</div>
+						  <div class="flex-item">1</div>
+						  <div class="flex-item">2</div>
+						  <div class="flex-item">3</div>
 						</div>
 					</code></pre>
 
 					<p>And a single flex property:</p>
 					<pre><code class="css" data-trim>
 						.flex-container {
-						  display: flex
+						  display: flex;
 						}
 
 						.flex-item {
@@ -114,21 +121,40 @@
 					</code></pre>
 				</section>
 
-				<section data-background-video="https://media.giphy.com/media/uTuLngvL9p0Xe/giphy.mp4">
-					<a href="index.html" target="_blank">Demo</a>
+				<section>
+					<h2>Flex API</h2>
+					<h4>Flex container</h4>
+					<p><pre><code class="css">align-items: [baseline | center | flex-end | flex-start | stretch]</code></pre></p>
+					<p><pre><code class="css">flex-direction: [row | column | row-reverse | column-reverse]</code></pre></p	>
+					<p><pre><code class="css">flex-wrap: [wrap | wrap-reverse]</code></pre></p>
+					<p><pre><code class="css">justify-content: [center | flex-start | flex-end | space-around | space-between]</code></pre></p>
+
+					<h4>Flex items</h4>
+					<p><pre><code>flex-grow: [number]</code></pre></p>
 				</section>
 
 				<section>
 					<h2>Flex in the real world</h2>
+					<p><a href="https://admin.getambassador.com/campaigns/32186" target="_blank">Status Indicator in Breadcrumb</a></p>
 				</section>
 
 				<section>
-					<h2>Resources</h2>
-					<ul>
-						<li>https://css-tricks.com/snippets/css/a-guide-to-flexbox/</li>
-						<li>http://flexboxfroggy.com/</li>
-					</ul>
+					<section>
+						<h1>Thank you.</h1>
+					</section>
+					<section>
+						<h2>Resources</h2>
+						<ul>
+							<li><a href="https://www.w3.org/TR/css-flexbox-1/">WC3: CSS Flexible Box Layout Module Level 1</li>
+							<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a></li>
+							<li><a href="https://philipwalton.github.io/solved-by-flexbox/">Solved by Flexbox</a></li>
+							<li><a href="http://flexboxfroggy.com/">Flexbox Froggy</a></li>
+							<li><a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties" target="_blank">A Visual Guide to CSS3 Flexbox Properties</a></li>
+						</ul>
+					</section>
 				</section>
+
+				<section data-background-video="https://media.giphy.com/media/uTuLngvL9p0Xe/giphy.mp4">
 			</div>
 		</div>
 
@@ -149,10 +175,6 @@
 					{ src: '/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
-
-			Reveal.configure({
-				backgroundTransition: 'zoom'
-			})
 		</script>
 	</body>
 </html>
