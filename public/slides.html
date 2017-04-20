@@ -17,6 +17,20 @@
 					<h1>Flexbox</h1>
 					<img src="/imgs/lead.jpg" alt="Tyrannosaurus Flex" />
 				</section>
+
+				<section>
+					<h2>Overview</h2>
+					<ul>
+						<li>What is Flexbox?</li>
+						<li>Does Flexbox makes things better?</li>
+						<li>Why should we use it?</li>
+						<li>A pretty basic example.</li>
+						<li>The Flex "API".</li>
+						<li>Flex in the wild.</li>
+						<li>Resources.</li>
+					</ul>
+				</section>
+
 				<section>
 					<section>
 						<h1>What is Flexbox?</h1>
@@ -33,20 +47,14 @@
 						<h2>We use it here at Ambassador.</h2>
 						<img src="/imgs/app.png" alt="Ambassador Dashboard" />
 					</section>
-
-					<aside class="notes">
-						<ul>
-							<li>W3C started the working draft in June 2009</li>
-							<li>Has become widely adopted as a web standard</li>
-						</ul>
-					</aside>
 				</section>
 
 				<section>
-					<h2>How does it help?</h2>
+					<h2>Does flexbox make things better?</h2>
 					<ul>
-						<li>it helps to position items in horizontal or vertical stacks in the browser</li>
-						<li>it determines the most efficient way to lay out, align and distribute space among items in a container
+						<li>Yes.</li>
+						<li>It helps to position items in horizontal or vertical stacks in the browser.</li>
+						<li>It determines the most efficient way to lay out, align and distribute space among items in a container.
 							<ul>
 								<li>(even when their size is unknown or dynamic).</li>
 							</ul>
@@ -56,24 +64,35 @@
 						<ul>
 							<li>Notoriously difficult to do in a browser for many years</li>
 							<li>tables > floats > flex</li>
-							<li>Demo: https://philipwalton.github.io/solved-by-flexbox/demos/grids/</li>
+							<li>W3C started the working draft in June 2009</li>
+							<li>Has become widely adopted as a web standard</li>
 						</ul>
 					</aside>
 				</section>
 
 				<section>
-					<h2>Why would you use it?</h2>
+					<h2>Why should we use it?</h2>
 					<ul>
-						<li>designers and developers find it easy to use</li>
-						<li>less HTML and CSS to achieve complex layouts</li>
-						<li>handle many devices with one codebase</li>
+						<li>Designers and developers find it easy to use.</li>
+						<li>Less HTML and CSS to achieve complex layouts.</li>
+						<li>Handle many layout scenarios with one codebase.</li>
+						<li>It's direction agnostic.</li>
 					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>A little bit to get used to</li>
+							<li>Layout scenarios: could be device size, or could be toggling between states on a desktop app.</li>
+							<li>Table grid/columns, sorting</li>
+							<li>https://philipwalton.github.io/solved-by-flexbox/</li>
+						</ul>
+					</aside>
 				</section>
 
 				<section>
 					<section>
-						<h2>Using Flex is simple</h2>
-						<p>First you need a "flex-container":</p>
+						<h2>The pretty basic example.</h2>
+						<p>Create a "flex-container":</p>
 
 						<pre><code class="html" data-trim>
 							<div class="flex-container"></div>
@@ -87,42 +106,45 @@
 					</section>
 
 					<section>
-						<h2>Knowing when to use flex?</h2>
-						<img src="imgs/freaking-out.gif" alt="freaking out" />
-						<p class="fragment" data-fragment-index="1">Takes some practice.</p>
+						<p>Add a few "flex items":</p>
+						<pre><code class="html" data-trim>
+							<div class="flex-container">
+							  <div class="flex-item">1</div>
+							  <div class="flex-item">2</div>
+							  <div class="flex-item">3</div>
+							</div>
+						</code></pre>
+
+						<pre><code class="css" data-trim>
+							.flex-container {
+							  display: flex;
+							}
+
+							.flex-item {
+							   flex: 1;
+							}
+						</code></pre>
+
+						<aside class="notes">
+							<ul>
+								<li>Some of you may be familiar with this "display" property</li>
+								<li>Traditionally: block (vertical), inline (horizontal)</li>
+								<li>The flex container gives you access to properties that can handle either scenario.</li>
+								<li>Adding `display: flex` to an element provides access to the "Flex API" for it's child elements.</li>
+								<li>`flex: 1` is the flex "grow" property. Tells each item to fill the space equally amongst themselves.</li>
+								<li>Adding items will tell the browser to equally distrubute space no matter how many.</li>
+								<li>Makes the flex item flexible and sets the flex basis to zero, resulting in an item that receives the specified proportion of the free space in the flex container. If all items in the flex container use this pattern, their sizes will be proportional to the specified flex factor.</li>
+							</ul>
+						</aside>
 					</section>
-
-					<aside class="notes">
-						<ul>
-							<li>Adding `display: flex` to an element provides access to the "Flex API" for it's child elements.</li>
-						</ul>
-					</aside>
 				</section>
 
 				<section>
-					<p>And a few "flex items":</p>
-					<pre><code class="html" data-trim>
-						<div class="flex-container">
-						  <div class="flex-item">1</div>
-						  <div class="flex-item">2</div>
-						  <div class="flex-item">3</div>
-						</div>
-					</code></pre>
-
-					<p>And a single flex property:</p>
-					<pre><code class="css" data-trim>
-						.flex-container {
-						  display: flex;
-						}
-
-						.flex-item {
-						   flex: 1;
-						}
-					</code></pre>
+					<img src="imgs/freaking-out.gif" alt="freaking out" />
 				</section>
 
 				<section>
-					<h2>Flex API</h2>
+					<h2>THe Flex "API".</h2>
 					<h4>Flex container</h4>
 					<p><pre><code class="css">align-items: [baseline | center | flex-end | flex-start | stretch]</code></pre></p>
 					<p><pre><code class="css">flex-direction: [row | column | row-reverse | column-reverse]</code></pre></p	>
@@ -130,11 +152,17 @@
 					<p><pre><code class="css">justify-content: [center | flex-start | flex-end | space-around | space-between]</code></pre></p>
 
 					<h4>Flex items</h4>
-					<p><pre><code>flex-grow: [number]</code></pre></p>
+					<p><pre><code>flex: <positive-number></code></pre></p>
+
+						<aside class="notes">
+							<ul>
+								<li>Stop here and do the demo: <a href="http://localhost:3000" target='_blank'>Demo</a></li>
+							</ul>
+						</aside>
 				</section>
 
 				<section>
-					<h2>Flex in the real world</h2>
+					<h2>Flex in the wild.</h2>
 					<p><a href="https://admin.getambassador.com/campaigns/32186" target="_blank">Status Indicator in Breadcrumb</a></p>
 				</section>
 
