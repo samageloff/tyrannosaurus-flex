@@ -5,14 +5,22 @@ class App extends Component {
   render() {
     return (
       <div className="flex-container">
-        <div className="flex-item">
-          <div className="content" />
-        </div>
-        <div className="flex-item">
-          <div className="content" />
-        </div>
-        <div className="flex-item">
-          <div className="content" />
+        <div className="flex-border">
+          <div className="flex-border">
+            <div className="flex-border">
+              <div className="flex-border">
+                <div className="flex-border">
+                  <div className="flex-border">
+                    <div className="flex-border">
+                      <div className="flex-border">
+                        <div className="content" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     )

@@ -1,11 +1,66 @@
 .flex-container {
   display: flex;
-  /*height: 100%;*/
+  background-color: red;
   /*flex-direction: column;*/
-  /*justify-content: center;
-  align-items: center;*/
+  padding: .1vw;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
   /*flex-wrap: wrap;*/
+  height: 100%;
   transition: all 1.5s cubic-bezier(.75, 0, .1, 1);
+}
+
+.flex-border {
+  background-color: red;
+  border: 2px solid rgba(108, 23, 20, .75);
+  padding: 1vw;
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+  flex-grow: 1;
+  transform: skew(.15deg);
+}
+
+.flex-border .flex-border {
+  padding: .85vw;
+  transform: skew(-.25deg);
+}
+
+.flex-border .flex-border .flex-border {
+  padding: .7vw;
+  transform: skew(.15deg);
+}
+
+.flex-border .flex-border .flex-border .flex-border {
+  padding: .55vw;
+  transform: skew(-.35deg);
+}
+
+.flex-border .flex-border .flex-border .flex-border .flex-border {
+  padding: .4vw;
+  transform: skew(.25deg);
+}
+
+.flex-border .flex-border .flex-border .flex-border .flex-border .flex-border {
+  padding: .25vw;
+  transform: skew(-.15deg);
+}
+
+.flex-border .flex-border .flex-border .flex-border .flex-border .flex-border .flex-border {
+  padding: .1vw;
+  transform: skew(.15deg);
+}
+
+.flex-border .flex-border .flex-border .flex-border .flex-border .flex-border .flex-border .flex-border {
+  padding: .05vw;
+  transform: skew(.15deg);
+}
+
+.flex-border .flex-border .flex-border .flex-border .flex-border .flex-border .flex-border .flex-border .flex-border {
+  border: 1px solid rgba(108, 23, 20, .75);
+  padding: .05vw;
+  transform: skew(-.15deg);
 }
 
 .flex-item {
@@ -19,16 +74,9 @@
   transition: all 1.5s cubic-bezier(.75, 0, .1, 1);
 }
 
-[class*='cat-'] {
-  background-size: cover;
-}
-
-.flex-item:nth-child(even) {
-  color: #fdf6e3;
-  background: rgba(0, 0, 0, .8);
-}
-
 .content {
+  background-color: white;
+  border: 2px solid yellow;
   align-items: center;
   display: flex;
   font-size: 8.4vw;
@@ -36,6 +84,15 @@
   padding: 1rem;
   position: relative;
   width: 100%;
+}
+
+[class*='cat-'] {
+  background-size: cover;
+}
+
+.flex-item:nth-child(even) {
+  color: #fdf6e3;
+  background: rgba(0, 0, 0, .8);
 }
 
 .content:after {
